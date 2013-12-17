@@ -80,6 +80,10 @@
 ;; automatically go to python-mode for wscript files (waf scripts)
 (setq auto-mode-alist (cons '("wscript" . python-mode) auto-mode-alist))
 
+(defun my-emacs-lisp-mode-hook ()
+  (flyspell-prog-mode))
+(add-hook 'emacs-lisp-mode-hook 'my-emacs-lisp-mode-hook)
+
 ;; qt ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'qt-pro)
