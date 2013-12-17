@@ -79,7 +79,7 @@
 
 ;; qt ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(require 'qt-pro)
+;;(require 'qt-pro)
 (add-to-list 'auto-mode-alist '("\\.pr[io]$" . qt-pro-mode))
 
 ;;; setup slime ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -165,3 +165,8 @@
 ;; initiate garbage collection every 20MB (higher than the default
 ;; value). this can make some operations faster in expense of memory.
 (setq gc-cons-threshold 20000000)
+
+;; set a separate custom file so that this file is not modified by
+;; Customize.
+(setq custom-file "~/.emacs-custom.el")
+(load custom-file 'noerror)
