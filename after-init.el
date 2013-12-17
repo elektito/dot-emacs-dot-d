@@ -54,10 +54,12 @@
 
 ;; Create my C/C++ personal style.
 (defun my-c-mode-hook ()
+  (flyspell-prog-mode)
   (setq c-basic-offset 2))
 (add-hook 'c-mode-hook 'my-c-mode-hook)
 
 (defun my-c++-mode-hook ()
+  (flyspell-prog-mode)
   (setq c-basic-offset 2)
   (c-set-offset 'substatement-open 0)
   (c-set-offset 'innamespace 0))
@@ -65,6 +67,7 @@
 
 ;;; bind RET to py-newline-and-indent
 (defun my-python-mode-hook ()
+  (flyspell-prog-mode)
   ;; NOTE: epc is needed for jedi: pip install epc
   (add-hook 'python-mode-hook 'jedi:setup)
   (setq jedi:setup-keys t)
@@ -165,6 +168,12 @@
 ;; initiate garbage collection every 20MB (higher than the default
 ;; value). this can make some operations faster in expense of memory.
 (setq gc-cons-threshold 20000000)
+
+;; set the modes for which flyspell mode is enabled/disabled
+(dolist (hook '(text-mode-hook))
+  (add-hook hook (lambda () (flyspell-mode 1))))
+(dolist (hook '(change-log-mode-hook log-edit-mode-hook))
+  (add-hook hook (lambda () (flyspell-mode -1))))
 
 ;; set a separate custom file so that this file is not modified by
 ;; Customize.

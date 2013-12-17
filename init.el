@@ -12,6 +12,7 @@
 (setq my-packages
       '(ido
 	flx-ido
+	flyspell
 	multi-term
 	w3m
 
