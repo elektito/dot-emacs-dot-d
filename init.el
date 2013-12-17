@@ -17,6 +17,7 @@
 	w3m
 
 	;; programming
+	markdown-mode
 	auto-complete
 	jedi
 	yasnippet
