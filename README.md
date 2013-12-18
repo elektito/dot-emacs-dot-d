@@ -9,3 +9,9 @@ an after-init-hook.
 
 `lisp/` directory contains any miscellaneous emacs lisp code.
 
+the text-based browser `w3m`, a `markdown` implementation, and the
+python package epc (`pip install epc`) need to be present for
+everything to work.
+
+`sbcl` and slime (located in `~/source/slime/`) are also needed, but
+I'll probably need to fix this and make it more portable later.
