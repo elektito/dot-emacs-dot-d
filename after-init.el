@@ -159,6 +159,14 @@
 
 (global-set-key [f7] 'wicked/toggle-w3m)
 
+;;; flyspell ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; set the modes for which flyspell mode is enabled/disabled
+(dolist (hook '(text-mode-hook))
+  (add-hook hook (lambda () (flyspell-mode 1))))
+(dolist (hook '(change-log-mode-hook log-edit-mode-hook))
+  (add-hook hook (lambda () (flyspell-mode -1))))
+
 ;;; misc ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (ido-mode t)
@@ -170,12 +178,6 @@
 ;; initiate garbage collection every 20MB (higher than the default
 ;; value). this can make some operations faster in expense of memory.
 (setq gc-cons-threshold 20000000)
-
-;; set the modes for which flyspell mode is enabled/disabled
-(dolist (hook '(text-mode-hook))
-  (add-hook hook (lambda () (flyspell-mode 1))))
-(dolist (hook '(change-log-mode-hook log-edit-mode-hook))
-  (add-hook hook (lambda () (flyspell-mode -1))))
 
 ;; set a separate custom file so that this file is not modified by
 ;; Customize.
