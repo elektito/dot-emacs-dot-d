@@ -25,17 +25,15 @@
       '((".*" . "~/.emacs_backups/")))  ;; '(("." . "~/.saves"))
       ;; Emacs will `make-directory' it if necessary
 
-;;; region selection ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; disable highlighted region selection.
-(transient-mark-mode 0)
-
 ;;; visual clutter ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; disable menu bar, tool bar and scroll bar
 (menu-bar-mode 0)
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
+
+;; disable highlighted region selection.
+(transient-mark-mode 0)
 
 ;; rebind menu-bar-open to f12 so that it won't conflict with unity's
 ;; f10 key binding
