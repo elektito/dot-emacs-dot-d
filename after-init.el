@@ -35,10 +35,6 @@
 ;; disable highlighted region selection.
 (transient-mark-mode 0)
 
-;; rebind menu-bar-open to f12 so that it won't conflict with unity's
-;; f10 key binding
-(global-set-key [f12] 'menu-bar-open)
-
 ;;; mode bar ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (line-number-mode t)
@@ -174,6 +170,10 @@
 (flx-ido-mode t) ;; enable flx-ido which results in fuzzy matching
 		 ;; with good sorting
 (setq ido-use-faces nil) ;; disable ido faces to see flx highlights
+
+;; rebind menu-bar-open to f12 so that it won't conflict with unity's
+;; f10 key binding
+(global-set-key [f12] 'menu-bar-open)
 
 ;; initiate garbage collection every 20MB (higher than the default
 ;; value). this can make some operations faster in expense of memory.
