@@ -35,6 +35,9 @@
 ;; disable highlighted region selection.
 (transient-mark-mode 0)
 
+;; disable startup message
+(setq inhibit-startup-message t)
+
 ;;; mode bar ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (line-number-mode t)
