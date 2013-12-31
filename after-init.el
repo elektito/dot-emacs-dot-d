@@ -166,6 +166,32 @@
 (dolist (hook '(change-log-mode-hook log-edit-mode-hook))
   (add-hook hook (lambda () (flyspell-mode -1))))
 
+
+;;; email and news ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; a ~/.authinfo file is needed with the following content:
+;;
+;; machine imap.googlemail.com login mostafa@sepent.com password secret port 993
+;; machine smtp.googlemail.com login mostafa@sepent.com password secret port 465
+;;
+;; where 'secret' is the password.
+
+(setq gnus-select-method
+      '(nnimap "gmail"
+               (nnimap-address "imap.googlemail.com")
+               (nnimap-server-port 993)
+               (nnimap-stream ssl)))
+
+(setq message-send-mail-function 'smtpmail-send-it
+      smtpmail-starttls-credentials '(("smtp.googlemail.com" 465 nil nil))
+      smtpmail-auth-credentials '(("smtp.googlemail.com" 465
+                                   "mostafa@sepent.com" nil))
+      smtpmail-default-smtp-server "smtp.googlemail.com"
+      smtpmail-smtp-server "smtp.googlemail.com"
+      smtpmail-smtp-service 465
+      smtpmail-local-domain "sepent.com"
+      gnus-ignored-newsgroups "^to\\.\\|^[0-9. ]+\\( \\|$\\)\\|^[\"]\"[#'()]")
+
 ;;; misc ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (ido-mode t)
