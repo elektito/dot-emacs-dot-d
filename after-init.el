@@ -208,7 +208,7 @@
 ;; value). this can make some operations faster in expense of memory.
 (setq gc-cons-threshold 20000000)
 
-;; set a separate custom file so that this file is not modified by
+;; set a separate custom file so that my files are not modified by
 ;; Customize.
 (setq custom-file "~/.emacs-custom.el")
 (load custom-file 'noerror)
