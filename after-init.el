@@ -70,7 +70,7 @@
   (setq jedi:setup-keys t)
   (setq jedi:complete-on-dot t)
 
-  (setq python-indent-offset 2)
+  (setq python-indent-offset 4)
   (define-key python-mode-map "\C-m" 'newline-and-indent))
 (add-hook 'python-mode-hook 'my-python-mode-hook)
 
