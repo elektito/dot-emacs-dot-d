@@ -20,7 +20,7 @@
 	markdown-mode
 	auto-complete
 	jedi
-	yasnippet
+	yasnippet-bundle
 
 	;; themes
 	zenburn-theme))

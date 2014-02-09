@@ -190,6 +190,9 @@
 
 ;;; misc ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; enable yasnippet
+(require 'yasnippet-bundle)
+
 (ido-mode t)
 (ido-everywhere t)
 (flx-ido-mode t) ;; enable flx-ido which results in fuzzy matching
