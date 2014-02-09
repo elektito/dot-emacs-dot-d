@@ -88,10 +88,10 @@
 
 ;;; setup slime ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(setq inferior-lisp-program "/usr/bin/sbcl")
 (add-to-list 'load-path "~/source/slime/")
-(require 'slime)
-(slime-setup '(slime-repl slime-fuzzy))
+(require 'slime-autoloads)
+(setq inferior-lisp-program "/usr/bin/sbcl")
+(setq slime-contribs '(slime-fancy))
 
 ;;; shell ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
