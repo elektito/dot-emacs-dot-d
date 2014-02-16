@@ -162,7 +162,6 @@
 (dolist (hook '(change-log-mode-hook log-edit-mode-hook))
   (add-hook hook (lambda () (flyspell-mode -1))))
 
-
 ;;; email and news ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; a ~/.authinfo file is needed with the following content:
@@ -196,7 +195,7 @@
 (ido-mode t)
 (ido-everywhere t)
 (flx-ido-mode t) ;; enable flx-ido which results in fuzzy matching
-		 ;; with good sorting
+                 ;; with good sorting
 (setq ido-use-faces nil) ;; disable ido faces to see flx highlights
 
 ;; rebind menu-bar-open to f12 so that it won't conflict with unity's
