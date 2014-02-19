@@ -59,7 +59,8 @@
   (flyspell-prog-mode)
   (setq c-basic-offset 2)
   (c-set-offset 'substatement-open 0)
-  (c-set-offset 'innamespace 0))
+  (c-set-offset 'innamespace 0)
+  (define-key c++-mode-map "\C-m" 'newline-and-indent))
 (add-hook 'c++-mode-hook 'my-c++-mode-hook)
 
 ;;; bind RET to py-newline-and-indent
