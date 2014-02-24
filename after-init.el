@@ -1,3 +1,5 @@
+;;; -*-  indent-tabs-mode: nil;  -*-
+
 ;;; themes ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (load-theme 'zenburn t)

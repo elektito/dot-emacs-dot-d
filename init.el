@@ -1,3 +1,5 @@
+;;; -*-  indent-tabs-mode: nil;  -*-
+
 (require 'cl)
 (require 'package)
 
