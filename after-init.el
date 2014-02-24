@@ -82,6 +82,10 @@
   (flyspell-prog-mode))
 (add-hook 'emacs-lisp-mode-hook 'my-emacs-lisp-mode-hook)
 
+;; enable auto-pairing braces
+(require 'autopair)
+(autopair-global-mode)
+
 ;; qt ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'qt-pro)

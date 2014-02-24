@@ -21,6 +21,7 @@
 	auto-complete
 	jedi
 	yasnippet-bundle
+        autopair
 
 	;; themes
 	zenburn-theme))
