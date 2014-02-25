@@ -200,6 +200,9 @@
 
 ;;; misc ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; don't mix tabs and spaces
+(setq-default indent-tabs-mode nil)
+
 ;; enable yasnippet
 (require 'yasnippet-bundle)
 
