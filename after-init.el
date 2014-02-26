@@ -224,3 +224,6 @@
 ;; Customize.
 (setq custom-file "~/.emacs-custom.el")
 (load custom-file 'noerror)
+
+;; start emacs server
+(server-start)
