@@ -1,0 +1,8 @@
+(:name yasnippet-snippets
+       :website "https://github.com/elektito/yasnippet-snippets.git"
+       :description "My yasnippet snippets."
+       :type github
+       :pkgname "elektito/yasnippet-snippets"
+       ;;:features "yasnippet"
+       ;;:compile "yasnippet.el"
+       )

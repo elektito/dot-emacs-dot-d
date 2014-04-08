@@ -204,7 +204,9 @@
 (setq-default indent-tabs-mode nil)
 
 ;; enable yasnippet
-(require 'yasnippet-bundle)
+(require 'yasnippet)
+(setq yas-snippet-dirs '("~/.emacs.d/el-get/yasnippet-snippets"))
+(yas-global-mode 1)
 
 (ido-mode t)
 (ido-everywhere t)

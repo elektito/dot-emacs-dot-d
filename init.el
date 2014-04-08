@@ -13,20 +13,20 @@
 ;;; list of packages to obtain if not installed
 (setq my-packages
       '(ido
-	flx-ido
-	flyspell
-	multi-term
-	w3m
+        flx-ido
+        flyspell
+        multi-term
+        w3m
 
-	;; programming
-	markdown-mode
-	auto-complete
-	jedi
-	yasnippet-bundle
+        ;; programming
+        markdown-mode
+        auto-complete
+        jedi
+        yasnippet
         autopair
 
-	;; themes
-	zenburn-theme))
+        ;; themes
+        zenburn-theme))
 
 (package-initialize)
 
@@ -38,6 +38,21 @@
           (progn (package-refresh-contents)
                  (dolist (package not-installed)
                    (package-install package))))))
+
+;;; make sure el-get is installed
+(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+
+(unless (require 'el-get nil 'noerror)
+  (with-current-buffer
+      (url-retrieve-synchronously
+       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
+    (goto-char (point-max))
+    (eval-print-last-sexp)))
+
+(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes/")
+(add-to-list 'el-get-sources 'yasnippet-snippets)
+(setq my-packages 'yasnippet-snippets)
+(el-get 'sync my-packages)
 
 ;;; load the real init file after all elpa packages have been loaded
 (add-hook 'after-init-hook (lambda () (load "~/.emacs.d/after-init.el")))
