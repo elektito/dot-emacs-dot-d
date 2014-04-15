@@ -249,6 +249,12 @@
 (setq yas-snippet-dirs '("~/.emacs.d/el-get/yasnippet-snippets"))
 (yas-global-mode 1)
 
+; lately, yasnippet has been interfering with term-mode (causing tab
+; auto-completion not work) when emacs is running in a window. this
+; fixes that problem.
+(add-hook 'term-mode-hook (lambda()
+                            (yas-minor-mode -1)))
+
 (ido-mode t)
 (ido-everywhere t)
 (flx-ido-mode t) ;; enable flx-ido which results in fuzzy matching
