@@ -24,6 +24,7 @@
         jedi
         yasnippet
         autopair
+        glsl-mode
 
         ;; themes
         zenburn-theme))
