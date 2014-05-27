@@ -52,17 +52,15 @@
 (global-auto-complete-mode t)
 
 ;; Create my C/C++ personal style.
-(defun my-c-mode-hook ()
-  (flyspell-prog-mode)
-  (setq c-basic-offset 2))
-(add-hook 'c-mode-hook 'my-c-mode-hook)
-
-(defun my-c++-mode-hook ()
+(defun my-cc-mode-hook ()
   (flyspell-prog-mode)
   (setq c-basic-offset 2)
+  (define-key c-mode-base-map "\C-m" 'newline-and-indent))
+(add-hook 'c-mode-common-hook 'my-cc-mode-hook)
+
+(defun my-c++-mode-hook ()
   (c-set-offset 'substatement-open 0)
-  (c-set-offset 'innamespace 0)
-  (define-key c++-mode-map "\C-m" 'newline-and-indent))
+  (c-set-offset 'innamespace 0))
 (add-hook 'c++-mode-hook 'my-c++-mode-hook)
 
 ;; Some workarounds for C++11 code. From this Stack Overflow answer:
