@@ -240,7 +240,11 @@
 
 ;;; whitespace ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(add-hook 'before-save-hook 'whitespace-cleanup)
+(defun my-whitespace-cleanup ()
+  (when (not (derived-mode-p 'makefile-mode))
+    (whitespace-cleanup)))
+
+(add-hook 'before-save-hook 'my-whitespace-cleanup)
 
 ;;; misc ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
