@@ -51,6 +51,11 @@
 (require 'auto-complete)
 (global-auto-complete-mode t)
 
+;; customize emacs lisp mode
+(add-hook 'emacs-lisp-mode-hook
+          '(lambda ()
+             (local-set-key (kbd "RET") 'newline-and-indent)))
+
 ;; Create my C/C++ personal style.
 (defun my-cc-mode-hook ()
   (flyspell-prog-mode)
