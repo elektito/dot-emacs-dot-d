@@ -272,6 +272,13 @@
 ;; f10 key binding
 (global-set-key [f12] 'menu-bar-open)
 
+;; scroll other window up when C-M-V (that is, control-alt-shift-v) is
+;; pressed
+(defun scroll-other-window-up (&optional f)
+  (interactive)
+  (scroll-other-window '-))
+(global-set-key "\M-\C-V" `scroll-other-window-up)
+
 ;; initiate garbage collection every 20MB (higher than the default
 ;; value). this can make some operations faster in expense of memory.
 (setq gc-cons-threshold 20000000)
