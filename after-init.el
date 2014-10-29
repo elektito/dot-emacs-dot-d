@@ -31,8 +31,9 @@
 
 ;; disable menu bar, tool bar and scroll bar
 (menu-bar-mode 0)
-(tool-bar-mode 0)
-(scroll-bar-mode 0)
+(when window-system
+  (tool-bar-mode 0)
+  (scroll-bar-mode 0))
 
 ;; disable highlighted region selection.
 (transient-mark-mode 0)
