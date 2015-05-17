@@ -25,6 +25,7 @@
         yasnippet
         autopair
         glsl-mode
+        protobuf-mode
 
         ;; themes
         zenburn-theme))

@@ -110,6 +110,12 @@
            ))
         ) t)
 
+(defconst my-protobuf-style
+  '((c-basic-offset . 2)
+    (indent-tabs-mode . nil)))
+(add-hook 'protobuf-mode-hook
+          (lambda () (c-add-style "my-style" my-protobuf-style t)))
+
 ;;; bind RET to py-newline-and-indent
 (defun my-python-mode-hook ()
   (flyspell-prog-mode)
