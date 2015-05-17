@@ -26,6 +26,7 @@
         autopair
         glsl-mode
         protobuf-mode
+        rainbow-delimiters
 
         ;; themes
         zenburn-theme))

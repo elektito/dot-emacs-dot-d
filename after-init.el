@@ -116,6 +116,9 @@
 (add-hook 'protobuf-mode-hook
           (lambda () (c-add-style "my-style" my-protobuf-style t)))
 
+;; enable rainbow-delimiters mode for all programming modes
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
 ;;; bind RET to py-newline-and-indent
 (defun my-python-mode-hook ()
   (flyspell-prog-mode)
