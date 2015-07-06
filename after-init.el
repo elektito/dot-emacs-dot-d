@@ -259,7 +259,19 @@
   (when (not (derived-mode-p 'makefile-mode))
     (whitespace-cleanup)))
 
-(add-hook 'before-save-hook 'my-whitespace-cleanup)
+(add-hook 'before-save-hook 'whitespace-cleanup)
+
+;;; org mode ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; archive all DONE tasks with "C-c A".
+(defun my-org-archive-done-tasks ()
+  (interactive)
+  (org-map-entries
+   (lambda ()
+     (org-archive-subtree)
+     (setq org-map-continue-from (outline-previous-heading)))
+   "/DONE" 'tree))
+(global-set-key "\C-cA" 'my-org-archive-done-tasks)
 
 ;;; misc ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
