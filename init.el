@@ -17,6 +17,7 @@
         flyspell
         multi-term
         w3m
+        smex
 
         ;; programming
         markdown-mode

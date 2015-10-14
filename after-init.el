@@ -295,6 +295,13 @@
                  ;; with good sorting
 (setq ido-use-faces nil) ;; disable ido faces to see flx highlights
 
+;; Set M-x to use smex
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+
+;; This is your old M-x.
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
 ;; rebind menu-bar-open to f12 so that it won't conflict with unity's
 ;; f10 key binding
 (global-set-key [f12] 'menu-bar-open)
