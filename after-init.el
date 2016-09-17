@@ -52,6 +52,11 @@
 (require 'auto-complete)
 (global-auto-complete-mode t)
 
+;; hook for all programming modes
+(defun my-prog-mode-hook ()
+  (setq show-trailing-whitespace t))
+(add-hook 'prog-mode-hook 'my-prog-mode-hook)
+
 ;; customize emacs lisp mode
 (add-hook 'emacs-lisp-mode-hook
           '(lambda ()
