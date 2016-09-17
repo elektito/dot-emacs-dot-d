@@ -259,7 +259,12 @@
   (when (not (derived-mode-p 'makefile-mode))
     (whitespace-cleanup)))
 
-(add-hook 'before-save-hook 'whitespace-cleanup)
+;; use whitespace-cleanup-mode instead of adding `whitespace-cleanup`
+;; to the `before-save-hook`. This cleans up the code when saving on
+;; the condition that it was initially clean. This way when we edit
+;; already broken (by our standards at least!) code, we won't mess up
+;; the entire file
+(global-whitespace-cleanup-mode)
 
 ;;; org mode ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

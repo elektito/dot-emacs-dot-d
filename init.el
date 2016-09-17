@@ -28,6 +28,7 @@
         glsl-mode
         protobuf-mode
         rainbow-delimiters
+        whitespace-cleanup-mode
 
         ;; themes
         zenburn-theme))
