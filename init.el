@@ -29,6 +29,8 @@
         protobuf-mode
         rainbow-delimiters
         whitespace-cleanup-mode
+        yaml-mode
+        dockerfile-mode
 
         ;; themes
         zenburn-theme))
