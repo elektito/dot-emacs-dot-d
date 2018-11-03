@@ -121,6 +121,20 @@
 (add-hook 'protobuf-mode-hook
           (lambda () (c-add-style "my-style" my-protobuf-style t)))
 
+(defun my-go-mode-hook ()
+  (add-hook 'before-save-hook 'gofmt-before-save)
+  (setq tab-width 4)
+  (setq indent-tabs-mode 1))
+(add-hook 'go-mode-hook 'my-go-mode-hook)
+
+
+(defun my-dart-mode-hook ()
+  (add-hook 'before-save-hook 'dartfmt-before-save)
+  (setq dart-sdk-path "/home/mostafa/flutter/flutter/bin/cache/dart-sdk/")
+  (setq tab-width 2)
+  (setq indent-tabs-mode 1))
+(add-hook 'dart-mode-hook 'my-dart-mode-hook)
+
 ;; enable rainbow-delimiters mode for all programming modes
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 

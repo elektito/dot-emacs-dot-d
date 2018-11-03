@@ -31,6 +31,8 @@
         whitespace-cleanup-mode
         yaml-mode
         dockerfile-mode
+        go-mode
+        dart-mode
 
         ;; themes
         zenburn-theme))
