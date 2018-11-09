@@ -205,12 +205,20 @@
  '("wikipedia-en"
    "http://en.wikipedia.org/wiki/Special:Search?search=%s"))
 
+(add-to-list
+ 'w3m-search-engine-alist
+ '("google"
+   "http://www.google.com/search?q=%s"))
+
 ;; add 'wp:' prefix for searching wikipedia.
 (add-to-list 'w3m-uri-replace-alist
              '("\\`wp:" w3m-search-uri-replace "wikipedia-en"))
 
+(add-to-list 'w3m-uri-replace-alist
+             '("\\`gg:" w3m-search-uri-replace "google"))
+
 ;; set wikipedia as the default search engine.
-(setq w3m-search-default-engine "wikipedia-en")
+(setq w3m-search-default-engine "google")
 
 ;; define a function and a key binding to switch between w3m and other
 ;; buffers.
