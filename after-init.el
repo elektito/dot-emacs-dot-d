@@ -209,7 +209,7 @@
      (define-key w3m-mode-map "," 'w3m-previous-buffer)
      (define-key w3m-mode-map "." 'w3m-next-buffer)
      (define-key w3m-mode-map "x" 'w3m-goto-url-new-session)
-     (define-key w3m-mode-map "z" 'w3m-view-this-url-new-session)))nil
+     (define-key w3m-mode-map "z" 'w3m-view-this-url-new-session)))
 
 (require 'w3m-search)
 
