@@ -206,6 +206,7 @@
 
 (eval-after-load 'w3m
   '(progn
+     (define-key w3m-mode-map "\C-ck" 'w3m-delete-buffer)  ; close tab
      (define-key w3m-mode-map "," 'w3m-previous-buffer)
      (define-key w3m-mode-map "." 'w3m-next-buffer)
      (define-key w3m-mode-map "x" 'w3m-goto-url-new-session)
