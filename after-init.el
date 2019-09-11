@@ -223,7 +223,7 @@
 (add-to-list
  'w3m-search-engine-alist
  '("google"
-   "http://www.google.com/search?q=%s"))
+   "http://www.google.com/search?q=%s&pws=0&gl=us&gws_rd=cr"))
 
 ;; add 'wp:' prefix for searching wikipedia.
 (add-to-list 'w3m-uri-replace-alist
