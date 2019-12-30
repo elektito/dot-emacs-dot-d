@@ -166,6 +166,9 @@
 (add-to-list 'auto-mode-alist '("\\.vert\\'" . glsl-mode))
 (add-to-list 'auto-mode-alist '("\\.frag\\'" . glsl-mode))
 
+;; enable groovy-mode for Jenkinsfiles.
+(add-to-list 'auto-mode-alist '("Jenkinsfile" . groovy-mode))
+
 ;; navigation ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; move to the matching brace by pressing %. If not on a brace, simply
