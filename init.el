@@ -33,6 +33,7 @@
         dockerfile-mode
         go-mode
         dart-mode
+        magit
 
         ;; themes
         zenburn-theme))
