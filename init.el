@@ -35,6 +35,7 @@
         dart-mode
         magit
         groovy-mode
+        magit
 
         ;; themes
         zenburn-theme))
