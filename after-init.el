@@ -126,6 +126,7 @@
   (setq tab-width 4)
   (setq indent-tabs-mode 1))
 (add-hook 'go-mode-hook 'my-go-mode-hook)
+(add-hook 'go-mode-hook 'lsp-deferred)
 
 
 (defun my-dart-mode-hook ()
