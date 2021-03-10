@@ -135,6 +135,13 @@
   (setq indent-tabs-mode 1))
 (add-hook 'dart-mode-hook 'my-dart-mode-hook)
 
+(require 'haxe-mode)
+(setq-default tab-width 4)
+(defun my-haxe-mode-hook ()
+  (setq c-basic-offset 4)
+  (setq indent-tabs-mode nil))
+(add-hook 'haxe-mode-hook 'my-haxe-mode-hook)
+
 ;; enable rainbow-delimiters mode for all programming modes
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
