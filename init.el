@@ -35,6 +35,7 @@
         groovy-mode
         magit
         haxe-mode
+        gdscript-mode
 
         ;; themes
         zenburn-theme))
