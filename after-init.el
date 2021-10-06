@@ -165,6 +165,9 @@
   (flyspell-prog-mode))
 (add-hook 'emacs-lisp-mode-hook 'my-emacs-lisp-mode-hook)
 
+;; prefer old compiled elisp byte code from being loaded
+(setq load-prefer-newer t)
+
 ;; enable auto-pairing braces
 (require 'autopair)
 (autopair-global-mode)
